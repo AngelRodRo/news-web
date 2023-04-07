@@ -5,6 +5,7 @@ import NewsCard from '../components/Card';
 import '@testing-library/jest-dom'
 
 const mockData = {
+  id: "randomId",
   title: 'test',
   description: 'Lorem Ipsum',
   thumbnail: 'https://picsum.photos/200/300',
@@ -17,9 +18,11 @@ describe('News Card component', () => {
   it('should render News Card component', async () => {
     render(
       <NewsCard 
+        id={mockData.id}
         title={mockData.title}
-        description={mockData.description}
-        thumbnail={mockData.thumbnail} 
+        body={mockData.description}
+        imageThumbnail={mockData.thumbnail}
+        imageUrl={mockData.url}
         url={mockData.url}
       />
     );
@@ -30,9 +33,11 @@ describe('News Card component', () => {
   it('should display a title text, description and thumbnail', () => {
     render(
       <NewsCard 
+        id={mockData.id}
         title={mockData.title}
-        description={mockData.description}
-        thumbnail={mockData.thumbnail} 
+        body={mockData.description}
+        imageThumbnail={mockData.thumbnail}
+        imageUrl={mockData.url}
         url={mockData.url}
       />
     );
@@ -46,9 +51,12 @@ describe('News Card component', () => {
   it('should display a read more button', () => {
     render(
       <NewsCard 
+        id={mockData.id}
+
         title={mockData.title}
-        description={mockData.description}
-        thumbnail={mockData.thumbnail} 
+        body={mockData.description}
+        imageThumbnail={mockData.thumbnail}
+        imageUrl={mockData.url}
         url={mockData.url}
       />
     );
@@ -61,9 +69,11 @@ describe('News Card component', () => {
 
     const { getByRole } = render(
       <NewsCard 
+        id={mockData.id}
         title={mockData.title}
-        description={mockData.description}
-        thumbnail={mockData.thumbnail} 
+        body={mockData.description}
+        imageThumbnail={mockData.thumbnail}
+        imageUrl={mockData.url}
         url={mockData.url}
         onThumbnailClick={handleThumbnailClick}
       />
@@ -77,9 +87,11 @@ describe('News Card component', () => {
   it('should open the news URL in a new window when the “Read more” link is clicked', () => { 
     render(
       <NewsCard 
+        id={mockData.id}
         title={mockData.title}
-        description={mockData.description}
-        thumbnail={mockData.thumbnail} 
+        body={mockData.description}
+        imageUrl={mockData.url}
+        imageThumbnail={mockData.thumbnail}
         url={mockData.url}
       />
     )
@@ -91,9 +103,11 @@ describe('News Card component', () => {
 
     render(
       <NewsCard 
+        id={mockData.id}
         title={mockData.title}
-        description={descriptionWithMoreThan20Words}
-        thumbnail={mockData.thumbnail} 
+        body={descriptionWithMoreThan20Words}
+        imageThumbnail={mockData.thumbnail}
+        imageUrl={mockData.url}
         url={mockData.url}
       />
     );
