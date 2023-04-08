@@ -1,10 +1,22 @@
 import React from 'react'
+import { 
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+
+import News from '@/components/NewsHomePage';
+
+import { NewsProvider } from './context';
+
+const queryClient = new QueryClient();
 
 const App: React.FC = () => {
   return (
-    <div data-testid="app" className="App">
-    
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <NewsProvider>
+        <News />
+      </NewsProvider>
+    </QueryClientProvider>
   )
 }
 

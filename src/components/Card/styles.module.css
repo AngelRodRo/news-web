@@ -1,0 +1,24 @@
+.container {
+  min-width: 400px;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.readMore {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+}
