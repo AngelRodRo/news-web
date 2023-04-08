@@ -1,0 +1,11 @@
+const {
+  VITE_NEWS_SEARCH_URL,
+  VITE_RAPIDAPI_KEY,
+  VITE_RAPIDAPI_HOST
+} = import.meta.env;
+
+export {
+  VITE_NEWS_SEARCH_URL,
+  VITE_RAPIDAPI_KEY,
+  VITE_RAPIDAPI_HOST
+};
