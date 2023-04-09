@@ -27,7 +27,7 @@ export const searchNews = async (query: string, pageNumber: number, pageSize: nu
     headers: { 
       'Content-Type': 'application/json',
       'x-rapidapi-key': VITE_RAPIDAPI_KEY,
-      'x-rapid-host': VITE_RAPIDAPI_HOST
+      'x-rapidapi-host': VITE_RAPIDAPI_HOST
     } 
   };
 
