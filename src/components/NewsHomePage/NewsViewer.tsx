@@ -33,7 +33,7 @@ const NewsViewer: React.FC<NewsViewProps> = ({
   let nroPages = 1;
 
   if (totalCount > 0) {
-    nroPages = Math.floor(totalCount / pageSize);
+    nroPages = Math.ceil(totalCount / pageSize);
     items = pagination(pageNumber, nroPages).map((item: string | number) => {
       if (item === '...') {
         return <Pagination.Ellipsis key={item} />
