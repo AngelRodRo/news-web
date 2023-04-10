@@ -119,3 +119,9 @@ To build a Docker image using this Dockerfile, navigate to the root of the proje
 ```
 docker build -t my-app .
 ```
+
+This will build a Docker image with the tag my-app. You can then run the container using the following command:
+
+```
+docker run -p 8080:80 -d my-app
+```
