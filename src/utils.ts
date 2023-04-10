@@ -22,7 +22,7 @@ export const pagination = (currentPage: number, pageCount: number) => {
     range.end += 1
   }
 
-  let pages: any =
+  let pages: (string | number)[] =
     currentPage > delta
       ? getRange(Math.min(range.start, pageCount - delta), Math.min(range.end, pageCount))
       : getRange(1, Math.min(pageCount, delta + 1))
@@ -33,7 +33,7 @@ export const pagination = (currentPage: number, pageCount: number) => {
     pages = withDots(1, [1, '...']).concat(pages)
   }
 
-  if (pages[pages.length - 1] < pageCount) {
+  if (Number(pages[pages.length - 1]) < pageCount) {
     pages = pages.concat(withDots(pageCount, ['...', pageCount]))
   }
 
