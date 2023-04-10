@@ -3,5 +3,8 @@ export default {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
     '.+\\.(css|styl|less|sass|scss)$': "jest-css-modules-transform"
-  }
+  },
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/src/$1",
+  } 
 }
