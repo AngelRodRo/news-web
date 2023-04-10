@@ -135,3 +135,5 @@ This will build a Docker image with the tag my-app. You can then run the contain
 ```
 docker run -p 8080:80 -d my-app
 ```
+
+Note: Environment variables will not be read at runtime execution, so to change the .env file to use those variables, the Dockerfile must be built again.
