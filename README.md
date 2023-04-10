@@ -26,6 +26,16 @@ npm run dev
 
 This will start the development server at http://localhost:5173. You can open this URL in your web browser to view the application.
 
+## Storybook
+
+The app uses Storybook for developing and testing UI components in isolation. To run Storybook, you can use the following command:
+
+```
+npm run storybook
+```
+
+This will start the Storybook server and open it in your browser. You can then navigate to different stories to view and interact with your components.
+
 ## Building for Production
 
 To build the project for production, run the following command:
