@@ -82,7 +82,7 @@ const NewsViewer: React.FC<NewsViewProps> = ({
   }
 
   if (status === 'error') {
-    return <div>Error: {error + ""}</div>
+    return <div>Service is not available</div>
   }
 
   return null;
