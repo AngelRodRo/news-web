@@ -7,6 +7,7 @@ import NewsList from '@/components/NewsList'
 
 import { pagination } from '@/utils';
 import { Spinner, Pagination } from 'react-bootstrap'
+import { News } from '@/types.ds';
 
 interface NewsViewProps{
   news: News[] | undefined;

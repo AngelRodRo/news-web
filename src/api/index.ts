@@ -1,8 +1,10 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
+import type { News, Image } from '@/types.ds';
+
 import { VITE_NEWS_SEARCH_URL, VITE_RAPIDAPI_HOST, VITE_RAPIDAPI_KEY } from "../constants";
 
-const normalizeImgData = (image: Image) => ({ imageUrl: image.url, imageThumbnail: image.thumbnail })
+const normalizeImgData = (image: Image) => ({ imageUrl: image.url, imageThumbnail: image.thumbnail || image.url })
 
 type NewsWithImage = News & { image: Image }
 
@@ -36,11 +38,10 @@ export const searchNews = async (query: string, pageNumber: number, pageSize: nu
     const news = data.value.map((news: NewsWithImage) => ({ 
       id: news.id,
       title: news.title,
-      body: news.body,
+      body: news.description,
       url: news.url,
       ...normalizeImgData(news.image) 
     } as News))
-
     return {
       news,
       totalCount: data.totalCount

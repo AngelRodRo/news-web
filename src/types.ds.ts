@@ -1,13 +1,14 @@
-type News = {
+export type News = {
   id: string;
   title: string;
+  description?: string;
   body: string;
   imageUrl: string;
   imageThumbnail?: string;
   url: string;
 }
 
-type Image = {
+export type Image = {
   url: string;
   thumbnail: string;
 }

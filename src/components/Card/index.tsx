@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 
+import { News } from '@/types.ds';
 import styles from './styles.module.css'
 
 interface Props extends News {

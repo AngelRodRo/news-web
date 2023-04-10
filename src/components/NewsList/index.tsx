@@ -5,6 +5,8 @@ import styles from './styles.module.css'
 
 import { useNews } from '@/context';
 
+import { News } from '@/types.ds';
+
 interface Props {
   news: News[];
 }

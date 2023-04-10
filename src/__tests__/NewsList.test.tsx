@@ -3,6 +3,9 @@ import { cleanup, render, screen } from '@testing-library/react';
 import NewsList from '../components/NewsList';
 import '@testing-library/jest-dom'
 
+import type { News } from '@/types.ds';
+
+
 const mockData: News[] = [
   {
     id: "randomId",
